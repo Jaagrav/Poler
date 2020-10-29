@@ -1,0 +1,168 @@
+.container {
+    position: absolute;
+    height: fit-content;
+    width: calc(100% - 40px);
+    border: 2px solid transparent;
+    border-radius: 7px;
+    background: #19212B;
+    background-clip: padding-box;
+    padding: 20px;
+    margin: auto;
+    max-width: 30pc;
+    max-height: calc(100% - 50px);
+    right: 0;left: 0;bottom: 0;top: 0;
+    border-radius: 7px;
+}
+
+.container::after {
+    position: absolute;
+    top: -2px; bottom: -2px;
+    left: -2px; right: -2px;
+    background: linear-gradient(-45deg, #3c9fe6,#93FFD8 );
+    content: '';
+    z-index: -1;
+    border-radius: 7px;
+}
+
+.branding-name {
+    margin: auto;
+    text-align: center;
+}
+
+.input-question,.input-option {
+    font-size: 32px;
+    width: 100%;
+    outline: none;
+    border: 0;
+    background: transparent;
+    padding: 10px 0;
+    text-align: center;
+    color: #93FFD8;
+}
+
+.input-question::placeholder,.input-option::placeholder {
+    color: #425265;
+}
+
+.options {
+    width: 100%;
+    max-height: calc(100vh - 220px);
+    overflow-x: hidden;
+    overflow-y: auto;
+    padding: 0 10px;
+    padding-top: 10px;
+}
+
+.option {
+    position: relative;
+    height: 60px;
+    width: calc(100% - 5px);
+    background-color: #232D39;
+    border-radius: 7px;
+    margin-bottom: 15px;
+    transition: .2s;
+    cursor: pointer;
+}
+
+.option div {
+    position: absolute;
+    height: fit-content;
+    width: 100%;
+    text-align: center;
+    margin: auto;
+    top: 0;bottom: 0;
+}
+
+@media (min-width:460px) {
+    .option:hover {
+        transform: scale(0.9);
+    }
+    .AddPollPage .option:hover {
+        transform: scale(1) !important;
+    }
+}
+
+.option .option-info {
+    height: 100%;
+    width: 100%;
+}
+.option .option-name {
+    position: absolute;left: 15px;top: 0;bottom: 0;margin: auto;
+    height: fit-content;
+    max-width: 80%;
+    text-align: left;
+}
+.option .option-percent {
+    position: absolute;right: 15px;top: 0;bottom: 0;margin: auto;
+    height: fit-content;
+}
+.option .progressBar {
+    height: 3px;
+    position: absolute;
+    margin: auto;
+    top: unset;
+    border-radius: 7px;
+    bottom: 0;left: 0;
+    transition: cubic-bezier(0.175, 0.885, 0.32, 1.275) .3s;
+    background: linear-gradient(-45deg, #3c9fe6,#93FFD8 );
+}
+
+.input-option {
+    font-size: 15px;
+    width: 100%;
+    height: 100%;
+}
+
+.deleteKey {
+    position: absolute;
+    top: -5px;
+    right: -5px;
+    height: 15px;
+    cursor: pointer;
+}
+
+.functional-btns, .functional-btns-ex {
+    height: fit-content;
+    width: 100px;
+    display: flex;
+    justify-content: space-around;
+    margin-top: 20px;
+}
+
+.functional-btns-ex {
+    width: 130px;
+}
+
+.functional-btns img, .functional-btns-ex img {
+    height: 30px;
+    cursor: pointer;
+}
+
+.tooltip {
+    display: none;
+    position: absolute;
+}
+
+.addBtn:hover .tooltip,.submitBtn:hover .tooltip,.addPollBtn:hover .tooltip{
+    display: block;
+    margin-top: -100px;
+    background: #425265;
+
+    width: fit-content;
+    margin-left: 10px;
+    transform: translateX(-50%);
+    padding: 10px 20px;
+    border-radius: 3px;
+}
+
+.toast-message {
+    background-color: #232D39;
+    height: fit-content;
+    width: fit-content;
+    padding: 10px;
+    border-radius: 7px;
+    position: absolute;
+    margin: auto;
+    bottom: 25px;right: 0;left: 0;
+}
+
